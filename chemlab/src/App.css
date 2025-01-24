@@ -1,0 +1,77 @@
+.body{
+  background-color: #00334d;
+}
+
+.lab-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #00334d;
+  color: white;
+  padding: 20px;
+}
+
+.shelf {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.table {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.item-button {
+  background-color: #005b96;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.item-button:hover {
+  background-color: #008cba;
+}
+.bottle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  margin: 10px;
+  width: 50px;
+}
+
+.bottle-neck {
+  width: 20px;
+  height: 20px;
+  background-color: #007acc;
+  border-radius: 5px 5px 0 0;
+}
+
+.bottle-body {
+  width: 50px;
+  height: 70px;
+  background-color: #005b96;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.bottle-label {
+  color: white;
+  font-size: 10px;
+  text-align: center;
+  padding: 5px;
+}
+
+.bottle:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
