@@ -18,7 +18,8 @@ const ItemButton = ({ label }) => {
     } else {
       // Stop following and return to the original position
       setIsFollowing(false);
-      setPosition(originalPositionRef.current);
+      setPosition(originalPositionRef.top=0);
+      setPosition(originalPositionRef.left=0);
     }
   };
 
