@@ -7,6 +7,8 @@ const App = () => {
     
       <LabTable />
     
+    
+
   );
 };
 

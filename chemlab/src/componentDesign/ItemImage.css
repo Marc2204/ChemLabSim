@@ -1,0 +1,27 @@
+/* Add styles for the image */
+.item-image {
+  position: static;
+  width: 25px;
+  height: 200px;
+  cursor: grab;
+}
+
+/* Add styles for the dragging image */
+.item-image.dragging {
+  position: absolute;
+}
+
+/* Add styles for the trash button */
+.trash-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  padding: 0;
+  border-radius: 50%; /* Makes the button circular */
+}
