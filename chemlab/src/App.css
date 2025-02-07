@@ -1,7 +1,9 @@
-body{
+/* General Styles */
+body {
   background-color: #222527;
 }
 
+/* Lab Container */
 .lab-container {
   position: relative;
   display: flex;
@@ -12,19 +14,20 @@ body{
   padding: 20px;
 }
 
+/* Shelf & Table */
 .shelf {
-
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
 }
 
 .table {
-  
   display: flex;
   gap: 15px;
   flex-wrap: wrap;
 }
+
+/* Chemical Screen */
 .chem-screen {
   margin-top: 20px;
   display: flex;
@@ -42,6 +45,7 @@ body{
   text-align: center;
 }
 
+/* Button Container */
 .chemical-button {
   margin-top: 30px;
   display: flex;
@@ -49,24 +53,53 @@ body{
   gap: 20px;
 }
 
-.chemical-button button {
-  background-color: #0e577c;
+/* Unified Button Styling */
+.chemical-button button,
+.chem-item button {
+  background: linear-gradient(135deg, #0e577c, #1e88a8);
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  outline: none;
   color: white;
   border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
 }
 
-.chemical-button button:hover {
-  background-color: #0a3e52;
+/* Hover Effect (No Color Change, Only Movement & Shadow) */
+.chemical-button button:hover,
+.chem-item button:hover {
+  transform: translateY(-2px);
+  box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.3);
 }
 
-.chemical-button button:active {
-  background-color: #083743;
+/* Active (Click) Effect (No Color Change, Only Depth) */
+.chemical-button button:active,
+.chem-item button:active {
+  transform: translateY(1px);
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+/* Focus Effect */
+.chemical-button button:focus,
+.chem-item button:focus {
+  outline: 3px solid rgba(30, 136, 168, 0.5);
+}
 
+/* Chemistry Row Layout */
+.chem-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
 
+.chem-item {
+  text-align: center;
+}
