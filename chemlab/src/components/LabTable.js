@@ -7,19 +7,21 @@ import chemBlue from '../imageButton/chemBlue.png';
 import trash from '../imageButton/trash.webp';
 
 const LabTable = () => {
-  const [inputValue, setInputValue] = useState(""); // State to store the input value
+  const [inputValue, setInputValue] = useState("");
 
+
+  // Para sa tatlong mukhang panturok
   const items = [
-    { src: chemYellow, alt: "P2 Tips", id: "p2-tips" },
-    { src: chemGreen, alt: "P200 Tips", id: "p200-tips" },
-    { src: chemRed, alt: "P1000 Tips (Red)", id: "p1000-tips-red" },
-    { src: chemBlue, alt: "P1000 Tips (Blue)", id: "p1000-tips-blue" },
-    { src: trash, alt: "Trash", id: "trash", isTrash: true },
+    { src: chemYellow, alt: "chemYellow", id: "p2-tips" },
+    { src: chemGreen, alt: "chemYellow", id: "p200-tips" },
+    { src: chemRed, alt: "chemYellow", id: "p1000-tips-red" },
+    { src: chemBlue, alt: "chemYellow", id: "p1000-tips-blue" },
+    { src: trash, alt: "chemYellow", id: "trash", isTrash: true },
   ];
 
   // Handle item click to update the input value
   const handleItemClick = (itemName) => {
-    setInputValue(itemName); // Update the input value to the clicked item name
+    setInputValue(itemName);
   };
 
   return (
@@ -33,7 +35,7 @@ const LabTable = () => {
             alt={item.alt}
             id={item.id}
             isTrash={item.isTrash}
-            onItemClick={handleItemClick} // Pass the onItemClick handler
+            onItemClick={handleItemClick}
           />
         ))}
       </div>
@@ -45,15 +47,17 @@ const LabTable = () => {
             alt={item.alt}
             id={item.id}
             isTrash={item.isTrash}
-            onItemClick={handleItemClick} // Pass the onItemClick handler
+            onItemClick={handleItemClick}
           />
         ))}
       </div>
 
+        // text screen
       <div className="chem-screen">
-        <input type="text" value={inputValue} disabled /> {/* Display the input value */}
+        <input type="text" value={inputValue} disabled />
       </div>
 
+      // Buttons for chems
       <div className="chemical-button">
         <button onClick={() => setInputValue("chem1")}>chem1</button>
         <button onClick={() => setInputValue("chem2")}>chem2</button>
