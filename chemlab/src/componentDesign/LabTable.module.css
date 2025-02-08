@@ -1,20 +1,22 @@
-
-body {
-  background-color: #222527;
-}
-
-.lab-container {
-  position: relative;
+.labContainer {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #0e577c;
   color: white;
   padding: 20px;
+  margin-left: 50px;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .shelf {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
   margin-bottom: 20px;
 }
@@ -25,13 +27,13 @@ body {
   flex-wrap: wrap;
 }
 
-.chem-screen {
+.chemScreen {
   margin-top: 20px;
   display: flex;
   justify-content: center;
 }
 
-.chem-screen input {
+.chemScreen input {
   background-color: #333;
   color: white;
   border: 2px solid #0e577c;
@@ -42,15 +44,14 @@ body {
   text-align: center;
 }
 
-.chemical-button {
+.chemicalButton {
   margin-top: 30px;
   display: flex;
   justify-content: center;
   gap: 20px;
 }
 
-.chemical-button button,
-.chem-item button {
+.chemicalButton button {
   background: linear-gradient(135deg, #0e577c, #1e88a8);
   border-radius: 8px;
   padding: 12px 24px;
@@ -68,29 +69,44 @@ body {
   overflow: hidden;
 }
 
-.chemical-button button:hover,
-.chem-item button:hover {
+.chemicalButton button:hover {
   transform: translateY(-2px);
   box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.3);
 }
 
-.chemical-button button:active,
-.chem-item button:active {
+.chemicalButton button:active {
   transform: translateY(1px);
   box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.chemical-button button:focus,
-.chem-item button:focus {
+.chemicalButton button:focus {
   outline: 3px solid rgba(30, 136, 168, 0.5);
 }
 
-.chem-row {
+.trashButton {
+  background: none;
+  border: none;
+  cursor: pointer;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  padding: 5px;
+  transition: transform 0.2s ease;
 }
 
-.chem-item {
-  text-align: center;
+.trashButton:hover {
+  transform: scale(1.1);
+}
+
+.trashImage {
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  pointer-events: none;
+  transition: transform 0.2s ease;
+}
+
+.trashImage:hover {
+  transform: scale(1.1);
 }
