@@ -41,7 +41,7 @@ const water = new Molecule(
     Sodium: "Sodium Hydroxide (NaOH)",
     Chlorine: "Hydrochloric Acid (HCl)",
   },
-  waterImage  // Use the imported image here
+  waterImage  
 );
 
 const sodium = new Molecule(
@@ -51,7 +51,7 @@ const sodium = new Molecule(
   {
     Water: "Sodium Hydroxide (NaOH)",
   },
-  sodiumImage // Use the imported image here
+  sodiumImage 
 );
 
 const chlorine = new Molecule(
@@ -61,7 +61,7 @@ const chlorine = new Molecule(
   {
     Water: "Hydrochloric Acid (HCl)",
   },
-  chlorineImage  // Use the imported image here
+  chlorineImage
 );
 
 const App = () => {
